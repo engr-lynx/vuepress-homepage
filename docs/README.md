@@ -2,7 +2,7 @@
 pageClass: home-page
 # some data for the components
 
-name: Harry James Potter
+name: Harry Potter
 profile: /profile.jpg
 
 socials:

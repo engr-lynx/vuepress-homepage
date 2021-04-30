@@ -4,7 +4,7 @@ describe('Home:', function() {
   });
   describe('Name:', () => {
     it('has the correct value', () => {
-      cy.get('[class="name"]').contains('Harry Potter');
+      cy.get('[class="name"]').contains('Harry James Potter');
     });
   });
 });
