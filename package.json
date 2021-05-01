@@ -13,11 +13,21 @@
   "license": "MIT",
   "devDependencies": {
     "cypress": "^7.1.0",
+    "cypress-cucumber-preprocessor": "^4.1.0",
     "vuepress": "^1.0.4"
   },
   "dependencies": {
     "markdown-it": "^8.4.1",
     "markdown-it-emoji": "^1.4.0",
     "markdown-it-katex": "^2.0.3"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
   }
 }

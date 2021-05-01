@@ -6,5 +6,6 @@ vuepress
 TODOs.md
 dist
 deploy
+cypress/cucumber-json/
 cypress/screenshots/
 cypress/videos/

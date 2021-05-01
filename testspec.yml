@@ -1,0 +1,24 @@
+version: 0.2
+phases:
+  install:
+    commands:
+    - npm ci
+    - npm i wait-on
+    - npm i pm2
+    - npm i mocha@5.2.0 mochawesome mochawesome-merge mochawesome-report-generator
+  pre_build:
+    commands:
+    - npx pm2 start npm -- start
+    - 'npx wait-on http://localhost:8080'
+  build:
+    commands:
+    - npm test
+  post_build:
+    commands:
+    - npx pm2 kill
+reports:
+  cucumber:
+    base-directory: cypress/cucumber-json
+    files:
+    - '**/*'
+    file-format: CUCUMBERJSON
