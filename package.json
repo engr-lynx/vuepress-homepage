@@ -6,10 +6,9 @@
   "repository": "https://github.com/mtobeiyf/vuepress-homepage.git",
   "scripts": {
     "clean": "rimraf dist/*",
-    "cy:open": "cypress open",
-    "cy:run": "cypress run",
-    "dev": "vuepress dev docs",
-    "build": "vuepress build docs"
+    "build": "vuepress build docs",
+    "start": "vuepress dev docs",
+    "test": "cypress run"
   },
   "license": "MIT",
   "devDependencies": {
