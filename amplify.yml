@@ -1,0 +1,38 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+      - yarn install
+    build:
+      commands:
+      - yarn build
+  artifacts:
+    base-directory: dist
+    files:
+    - '**/*'
+  cache:
+    paths:
+    - 'node_modules/**/*'
+# test:
+#   artifacts:
+#     baseDirectory: cypress
+#     configFilePath: '**/mochawesome.json'
+#     files:
+#       - '**/*.png'
+#       - '**/*.mp4'
+#   phases:
+#     install:
+#       commands:
+#       - yarn install
+#       - yarn global add pm2 wait-on
+#     preTest:
+#       commands:
+#       - pm2 start yarn -- start
+#       - 'wait-on http://localhost:8080'
+#     test:
+#       commands:
+#       - yarn test
+#     postTest:
+#       commands:
+#       - pm2 kill
